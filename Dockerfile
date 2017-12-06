@@ -37,7 +37,10 @@ RUN apt-get install -y \
     unzip \
     rsync \
     kmod \
-    openssh-client
+    openssh-client \
+    gcc-multilib \
+    g++-multilib \
+    libc6-dev-i386
 
 
 # Set locale to UTF8
