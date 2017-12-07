@@ -87,24 +87,24 @@ sudo docker ps -a
 Stop the container
 
 ```shell
-sudo docker stop fli4l-buildroot-container
+sudo docker stop fli4l-3.10-buildroot-container
 ```
 
 Start the container
 
 ```shell
-sudo docker start fli4l-buildroot-container
+sudo docker start fli4l-3.10-buildroot-container
 ```
 
 Get logs from container
 
 ```shell
-sudo docker logs -f fli4l-buildroot-container
+sudo docker logs -f fli4l-3.10-buildroot-container
 ```
 
 Open cmdline inside of container
 
 ```shell
-sudo docker exec -i -t fli4l-buildroot-container /bin/bash
+sudo docker exec -i -t fli4l-3.10-buildroot-container /bin/bash
 ```
 
