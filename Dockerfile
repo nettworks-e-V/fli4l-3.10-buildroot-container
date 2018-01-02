@@ -40,7 +40,9 @@ RUN apt-get install -y \
     openssh-client \
     gcc-multilib \
     g++-multilib \
-    libc6-dev-i386
+    libc6-dev-i386 \
+    flex \
+    bison
 
 # Set PERL_USE_UNSAFE_INC to make Debian 9 latex2html work
 ENV PERL_USE_UNSAFE_INC 1
