@@ -2,16 +2,13 @@ FROM debian:jessie
 MAINTAINER Yves Schumann <yves@eisfair.org>
 
 # Define environment vars
+# Set PERL_USE_UNSAFE_INC to make Debian 9 latex2html work
 ENV WORK_DIR=/data/work \
     SHARED_DIR=/data/shared/fli4l \
-    DEBIAN_FRONTEND=noninteractive
-
-# Set PERL_USE_UNSAFE_INC to make Debian 9 latex2html work
-ENV PERL_USE_UNSAFE_INC 1
-
-ENV LC_ALL en_US.UTF-8
-
-ENV TZ 'Europe/Berlin'
+    DEBIAN_FRONTEND=noninteractive \
+    PERL_USE_UNSAFE_INC=1 \
+    LC_ALL=en_US.UTF-8 \
+    TZ='Europe/Berlin'
 
 # Mount point for development workspace
 RUN mkdir -p ${WORK_DIR}
@@ -60,4 +57,3 @@ RUN echo $TZ > /etc/timezone && \
     rm /etc/localtime && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata
-
